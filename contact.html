@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+  
+  body {
+    background: #fbfbfd;
+}
+
+.new_footer_area {
+    background: #fbfbfd;
+}
+
+
+.new_footer_top {
+    padding: 120px 0px 270px;
+    position: relative;
+      overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.ti-facebook:before {
+    content: "\e741";
+}
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+.ti-vimeo-alt:before {
+    content: "\e74a";
+}
+.ti-pinterest:before {
+    content: "\e731";
+}
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #fff;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+  color:white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+  background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+  background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+</style>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <h1>GAMICS</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="explore.html">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Games
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="snake.html">snake</a></li>
+              <li><a class="dropdown-item" href="game.html">hangman</a></li>
+              <li><a class="dropdown-item" href="flappybird.html">Flappy Bird</a></li>
+              <li><a class="dropdown-item" href="2dbrickbreaker.html">2d Brick breaker</a></li>
+              <li><a class="dropdown-item" href="archery.html">archery</a></li>
+              <li><a class="dropdown-item" href="bullseye.html">bullseye</a></li>
+              <li><a class="dropdown-item" href="carnival.html">carnival</a></li>
+              <li><a class="dropdown-item" href="cointoss.html">cointoss</a></li>
+              <li><a class="dropdown-item" href="memory.html">memory game</a></li>
+              <li><a class="dropdown-item" href="pong.html">pong</a></li>
+              <li><a class="dropdown-item" href="quize.html">quize</a></li>
+              <li><a class="dropdown-item" href="rockpaperscissor.html">rock paper secisor</a></li>
+              <li><a class="dropdown-item" href="tictactoe.html">Tic Tac Toe</a></li>
+              <li><a class="dropdown-item" href="whakeamole.html">whake a mole</a></li>
+              
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="image/h4_img2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Get in Touch</h1>
+        <p class="lead">Feel free to get in touch with us! Whether you have questions, feedback, or just want to know more, we're here to help. You can reach us via email or through the form below. Our goal is to assist you and address any inquiries you may have, and we're eager to establish a connection with you. Your thoughts, suggestions, or positive experiences are valuable to us. Thank you!</p>
+        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+    <div class="container pt-5 pb-lg-2 pb-xl-4 py-xxl-5">
+
+        <!-- Page title -->
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Contacts</h1>
+        <p class="fs-lg pb-4 mb-2 mb-sm-3">Get in touch with us by completing the below form or call us now</p>
+
+        <!-- Details cards -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 pb-2 pb-sm-4 pb-lg-5">
+
+          <!-- Address -->
+          <div class="col">
+            <div class="card border-0 h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-4">Address</h4>
+                <p class="fs-lg fw-medium pb-3 mb-3">514 Magnolia St. Orlando, FL 32806</p>
+                <a class="btn btn-sm btn-outline-primary" href="#">
+                  <i class="ai-map-pin me-1"></i>
+                  Get directions
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="col">
+            <div class="card border-0 h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-4">Phone</h4>
+                <ul class="list-unstyled mb-0">
+                  <li class="pb-1 mb-2">
+                    <span class="d-block fs-sm text-body-secondary mb-1">Main office</span>
+                    <a class="nav-link fs-lg p-0" href="tel:+178632256033">+1&nbsp;(786)&nbsp;322&nbsp;560&nbsp;33</a>
+                  </li>
+                  <li>
+                    <span class="d-block fs-sm text-body-secondary mb-1">Reception room</span>
+                    <a class="nav-link fs-lg p-0" href="tel:+178630056044">+1&nbsp;(786)&nbsp;300&nbsp;560&nbsp;44</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <div class="col">
+            <div class="card border-0 h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-4">Schedule</h4>
+                <ul class="list-unstyled mb-0">
+                  <li class="pb-1 mb-2">
+                    <span class="d-block fs-sm text-body-secondary mb-1">Mon - Thu</span>
+                    <div class="d-flex align-items-center">
+                      <span class="text-nav fs-lg fw-medium">10:00</span>
+                      <span class="border-top mx-4" style="width: 36px; height: 1px;"></span>
+                      <span class="text-nav fs-lg fw-medium">22:00</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="d-block fs-sm text-body-secondary mb-1">Fri - Sat</span>
+                    <div class="d-flex align-items-center">
+                      <span class="text-nav fs-lg fw-medium">10:00</span>
+                      <span class="border-top mx-4" style="width: 36px; height: 1px;"></span>
+                      <span class="text-nav fs-lg fw-medium">20:00</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col">
+            <div class="card border-0 h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-4">Email</h4>
+                <ul class="list-unstyled mb-0">
+                  <li class="pb-1 mb-2">
+                    <span class="d-block fs-sm text-body-secondary mb-1">Main office</span>
+                    <a class="nav-link fs-lg p-0" href="mailto:office@example.com">office@example.com</a>
+                  </li>
+                  <li>
+                    <span class="d-block fs-sm text-body-secondary mb-1">Reception room</span>
+                    <a class="nav-link fs-lg p-0" href="mailto:reception@example.com">reception@example.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="image/h4_img1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Reach Out and Connect</h1>
+            <p class="lead">We're here to listen. Whether you have a question about our services, need assistance, or just want to say hello. Your satisfaction is our priority, and we're committed to providing you with the support you need. Feel free to reach out to us via email, phone, or the contact form below. We value your input and look forward to hearing from you.</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="py-5 py-lg-8">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-6 offset-lg-1 col-md-12 col-12">
+
+
+                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Contact us</h1>
+                 <p class="mb-0 lead">Please reach out to us if you have questions about our games, or anything else.</p>
+              </div>
+           </div>
+        </div>
+     </section>
+    <section class="mb-xl-9 my-5">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                 <div class="row g-xl-7 gy-5">
+                    <div class="col-md-7 col-12">
+                       <div class="card shadow-sm">
+                          <div class="card-body">
+                             <form class="row g-3 needs-validation" novalidate="">
+                                <div class="col-lg-6 col-md-12">
+                                   <label for="contactFirstNameInput" class="form-label">
+                                      First Name
+                                      <span class="text-danger">*</span>
+                                   </label>
+                                   <input type="text" class="form-control" id="contactFirstNameInput" required="" fdprocessedid="7a2nyb">
+                                   <div class="invalid-feedback">Please enter firstname.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                   <label for="contactLastNameInput" class="form-label">
+                                      Last Name
+                                      <span class="text-danger">*</span>
+                                   </label>
+                                   <input type="text" class="form-control" id="contactLastNameInput" required="" fdprocessedid="nz5qzp">
+                                   <div class="invalid-feedback">Please enter lastname.</div>
+                                </div>
+                                <div class="col-md-12">
+                                   <label for="contactEmailInput" class="form-label">
+                                      Email
+                                      <span class="text-danger">*</span>
+                                   </label>
+                                   <input type="email" class="form-control" id="contactEmailInput" required="" fdprocessedid="hyewen">
+                                   <div class="invalid-feedback">Please enter email.</div>
+                                </div>
+                                <div class="col-md-12">
+                                   <label for="contactCompanyNameInput" class="form-label">Address</label>
+                                   <input type="text" class="form-control" id="contactCompanyNameInput" required="" fdprocessedid="w4po7f">
+                                   <div class="invalid-feedback">Please enter company name.</div>
+                                </div>
+                                <div class="col-md-12">
+                                   <label for="contactPhoneInput" class="form-label">Phone</label>
+                                   <input type="tel" class="form-control" id="contactPhoneInput" required="" fdprocessedid="ep6yj">
+                                   <div class="invalid-feedback">Please enter phone.</div>
+                                </div>
+                                <div class="col-md-12">
+                                   <label for="contactTextarea" class="form-label">Message</label>
+                                   <textarea class="form-control" id="contactTextarea" placeholder="Write to us" rows="4" required=""></textarea>
+                                   <div class="invalid-feedback">Please enter a message.</div>
+                                </div>
+                                <div class="d-grid">
+                                   <button class="btn btn-primary" type="submit" fdprocessedid="6k8j3j">Send</button>
+                                </div>
+                             </form>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-md-5 col-12">
+                       <div class="mb-7">
+                          <div class="icon-shape bg-primary bg-opacity-10 rounded icon-md mb-5">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset text-primary" viewBox="0 0 16 16">
+                                <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"></path>
+                             </svg>
+                          </div>
+                          <div>
+                             <h4>Technical support</h4>
+                             <p class="mb-0">
+                                Found a persistent bug, or need help setting a new team member up? Can’t crack a feature?
+                                <a href="#" class="text-primary">Let us know!</a>
+                             </p>
+                          </div>
+                       </div>
+                       <div class="mb-7">
+                          <div class="icon-shape bg-primary bg-opacity-10 rounded icon-md mb-5">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots text-primary" viewBox="0 0 16 16">
+                                <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                                <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"></path>
+                             </svg>
+                          </div>
+                          <div>
+                             <h4>General chat</h4>
+                             <p class="mb-0">
+                                Billing issues, customizations, plan changes--anything that doesn’t fit in the other two brackets, goes here.
+                                <a href="#" class="text-primary">Start Chat</a>
+                             </p>
+                          </div>
+                       </div>
+                  
+                  
+                       <div class="mb-7">
+                          <div class="icon-shape bg-primary bg-opacity-10 rounded icon-md mb-5">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper text-primary" viewBox="0 0 16 16">
+                                <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"></path>
+                                <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"></path>
+                             </svg>
+                          </div>
+                          <div>
+                             <h4>Help Center</h4>
+                             <p class="mb-0">
+                                Want to share feedback on an existing feature or suggest a new one? Talk to us!
+                                <a href="#" class="text-primary">Visit Help Center</a>
+                             </p>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+    
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="image/h4_ft_img1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Let's Communicate! Let's Stay Connected!</h1>
+              <p class="lead">Have questions, suggestions, or just want to chat about gaming? We're here to listen and assist you every step of the way. Feel free to drop us a message using the form below, and our dedicated team will get back to you promptly. Your feedback matters to us, and we're committed to ensuring your gaming experience is nothing short of amazing. Let's build a stronger gaming community together – because your voice shapes the future of gaming!</p>
+              <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="b4req7">Primary</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="b0w9z9">Default</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+    
+      </section>
+      <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                            <p>Don’t miss any updates of our new Games.!</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Pages</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="blog.html">Blog's</a></li>
+                                <li><a href="gallery.html">Games</a></li>
+                                <li><a href="explore.html">Explore</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Term &amp; conditions</a></li>
+                                <li><a href="#">Reporting</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Support Policy</a></li>
+                                <li><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                            <div class="f_social_icon">
+                                <a href="#" class="fab fa-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                  </svg></a>
+                                <a href="#" class="fab fa-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                                  </svg></a>
+                                <a href="#" class="fab fa-linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                  </svg></a>
+                                <a href="#" class="fab fa-pinterest"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                                  </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-7">
+                        <p class="mb-0 f_400">© GAMICS Inc.. 2024 All rights reserved.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

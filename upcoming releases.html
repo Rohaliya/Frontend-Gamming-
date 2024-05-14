@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    body {
+      background: #fbfbfd;
+  }
+  
+  .new_footer_area {
+      background: #fbfbfd;
+  }
+  
+  
+  .new_footer_top {
+      padding: 120px 0px 270px;
+      position: relative;
+        overflow-x: hidden;
+  }
+  .new_footer_area .footer_bottom {
+      padding-top: 5px;
+      padding-bottom: 50px;
+  }
+  .footer_bottom {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      color: #7f88a6;
+      padding: 27px 0px;
+  }
+  .new_footer_top .company_widget p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28px;
+      color: #6a7695;
+      margin-bottom: 20px;
+  }
+  .new_footer_top .company_widget .f_subscribe_two .btn_get {
+      border-width: 1px;
+      margin-top: 20px;
+  }
+  .btn_get_two:hover {
+      background: transparent;
+      color: #5e2ced;
+  }
+  .btn_get:hover {
+      color: #fff;
+      background: #6754e2;
+      border-color: #6754e2;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  }
+  a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+      text-decoration: none;
+      outline: none;
+  }
+  
+  
+  
+  .new_footer_top .f_widget.about-widget .f_list li a:hover {
+      color: #5e2ced;
+  }
+  .new_footer_top .f_widget.about-widget .f_list li {
+      margin-bottom: 11px;
+  }
+  .f_widget.about-widget .f_list li:last-child {
+      margin-bottom: 0px;
+  }
+  .f_widget.about-widget .f_list li {
+      margin-bottom: 15px;
+  }
+  .f_widget.about-widget .f_list {
+      margin-bottom: 0px;
+  }
+  .new_footer_top .f_social_icon a {
+      width: 44px;
+      height: 44px;
+      line-height: 43px;
+      background: transparent;
+      border: 1px solid #e2e2eb;
+      font-size: 24px;
+  }
+  .f_social_icon a {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 45px;
+      color: #858da8;
+      display: inline-block;
+      background: #ebeef5;
+      text-align: center;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+  }
+  .ti-facebook:before {
+      content: "\e741";
+  }
+  .ti-twitter-alt:before {
+      content: "\e74b";
+  }
+  .ti-vimeo-alt:before {
+      content: "\e74a";
+  }
+  .ti-pinterest:before {
+      content: "\e731";
+  }
+  
+  .btn_get_two {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background: #5e2ced;
+      border-color: #5e2ced;
+      color: #fff;
+  }
+  
+  .btn_get_two:hover {
+      background: transparent;
+      color: #5e2ced;
+  }
+  
+  .new_footer_top .f_social_icon a:hover {
+      background: #5e2ced;
+      border-color: #5e2ced;
+    color:white;
+  }
+  .new_footer_top .f_social_icon a + a {
+      margin-left: 4px;
+  }
+  .new_footer_top .f-title {
+      margin-bottom: 30px;
+      color: #263b5e;
+  }
+  .f_600 {
+      font-weight: 600;
+  }
+  .f_size_18 {
+      font-size: 18px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+      color: #4b505e;
+  }
+  .new_footer_top .f_widget.about-widget .f_list li a {
+      color: #6a7695;
+  }
+  
+  
+  .new_footer_top .footer_bg {
+      position: absolute;
+      bottom: 0;
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+      width: 100%;
+      height: 266px;
+  }
+  
+  .new_footer_top .footer_bg .footer_bg_one {
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+      width: 330px;
+      height: 105px;
+    background-size:100%;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      -webkit-animation: myfirst 22s linear infinite;
+      animation: myfirst 22s linear infinite;
+  }
+  
+  .new_footer_top .footer_bg .footer_bg_two {
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+      width: 88px;
+      height: 100px;
+    background-size:100%;
+      bottom: 0;
+      left: 38%;
+      position: absolute;
+      -webkit-animation: myfirst 30s linear infinite;
+      animation: myfirst 30s linear infinite;
+  }
+  
+  
+  
+  @-moz-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @-webkit-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="border-bottom lh-1 py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <a class="link-secondary" href="#"></a>
+        </div>
+        <div class="col-4 text-center">
+          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">GAMICS</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <a class="link-secondary" href="#" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+          </a>
+          <a class="btn btn-sm btn-outline-secondary" href="signup.html">Sign up</a>
+        </div>
+      </div>
+    </header>
+  
+    <div class="nav-scroller py-1 mb-3 border-bottom">
+      <nav class="nav nav-underline justify-content-between">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Home
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog home</a></li>
+            </ul>
+          </li>
+        <a class="nav-item nav-link link-body-emphasis" href="technology.html">Technology</a>
+        <a class="nav-item nav-link link-body-emphasis" href="news.html">news</a>
+        <a class="nav-item nav-link link-body-emphasis" href="reviews.html">reviews</a>
+        <a class="nav-item nav-link link-body-emphasis" href="business.html">Business</a>
+        <a class="nav-item nav-link link-body-emphasis" href="magazine.html">magazine</a>
+        <a class="nav-item nav-link link-body-emphasis" href="science.html">Science</a>
+        <a class="nav-item nav-link link-body-emphasis" href="tech and tool.html">tech and tool</a>
+        <a class="nav-item nav-link link-body-emphasis" href="events .html">Events</a>
+        <a class="nav-item nav-link link-body-emphasis" href="upcoming releases.html">Upcoming Releases</a>
+      </nav>
+    </div>
+  </div>
+  <main class="container">
+   
+  
+    <div class="row g-5">
+      <div class="col-md-8">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Upcoming Releases
+        </h3>
+  
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Gaming Releases to Watch Out For</title>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Upcoming Gaming Releases to Watch Out For</h1>
+        </header>
+        <section>
+            <h2>Introduction</h2><br>
+            <img src="https://www.godisageek.com/wp-content/uploads/Game-release-dates-2024.jpg" alt="" srcset="" height="470">
+            <p>The gaming industry is constantly evolving, with new titles being announced that promise to push the boundaries of storytelling, gameplay, and visual fidelity. In this blog post, we'll dive into some of the most anticipated upcoming releases. Whether you're into heart-pounding action, deep strategy, or immersive storytelling, there's something on the horizon for every type of gamer.</p>
+        </section>
+        <section>
+            <h2>Most Anticipated Games of the Year</h2>
+            <ul>
+                <li><strong>Game X (Release Date):</strong> A revolutionary open-world experience that combines cutting-edge graphics with deep, narrative-driven gameplay. Game X promises to be an epic adventure across a dynamically evolving landscape.</li>
+                <li><strong>Strategy Y (Release Date):</strong> Strategy enthusiasts have something special to look forward to with Strategy Y. Offering a unique blend of turn-based tactics and real-time decision-making, this game is set to redefine the genre.</li>
+                <li><strong>Indie Gem Z (Release Date):</strong> From a small but passionate development team comes Indie Gem Z, a story-driven experience that challenges players to think deeply about the choices they make. With its hand-drawn art style and compelling narrative, it's poised to be the next big indie hit.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Upcoming Releases in VR</h2><br>
+            <img src="https://www.hindustantimes.com/ht-img/img/2023/06/20/1600x900/Games-of-2023-1000x600_1687269559010_1687269565455.jpg" alt="" srcset="" height="470"><br><br>
+            <p>Virtual Reality is set to get even more exciting with titles like VR Adventure A and VR Shooter B slated for release. These games aim to leverage the latest VR technology to deliver immersive and engaging experiences that are as close as you can get to living inside a video game.</p>
+        </section>
+        <section>
+            <h2>Games to Look Forward To on Next-Gen Consoles</h2>
+            <p>With the new generation of consoles now available, developers are eager to showcase what these powerful machines can do. Expect breathtaking visuals, faster load times, and smoother gameplay across all upcoming titles, including the much-anticipated Next-Gen Exclusive C.</p>
+        </section>
+        <section>
+            <h2>Conclusion</h2>
+            <p>The future of gaming looks brighter than ever, with a lineup of titles that promise to bring new experiences, stories, and challenges. Whether you're gaming on PC, console, or mobile, the upcoming releases are sure to provide countless hours of entertainment. Stay tuned to Gamic's Gaming for the latest news, reviews, and updates on these and other exciting gaming developments.</p>
+        </section>
+        <footer>
+            <p>Join the discussion on our forums and let us know which upcoming releases you're most excited about! Follow us on social media to stay updated with the latest gaming news and insights from Gamic's Gaming.</p>
+        </footer>
+    </article>
+</body>
+</html>
+
+
+  
+      </div>
+  
+      <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="p-4 mb-3 bg-body-tertiary rounded">
+            <h4 class="fst-italic">About</h4>
+            <p class="mb-0">Find joy in every read, for each page holds a gem waiting to be discovered.</p>
+          </div>
+  
+          <div>
+            <h4 class="fst-italic">Recent posts</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <img src="https://elearningindustry.com/wp-content/uploads/2021/06/5-fun-student-engagement-activities.png"" class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0"> How Gaming Revolutionizes Education, Culture, and Social Connections</h6>
+                    <small class="text-body-secondary">January 15, 2024</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <img src="https://assets-eu-01.kc-usercontent.com/7bf8ef96-9447-0161-1923-3ac6929eb20f/ce160d9b-8f9e-4d73-b05c-337a6a438269/gaming-illustration.jpg?q=75&fm=jpg&w=960" class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Unlocking Success: Navigating the Business of Gaming</h6>
+                    <small class="text-body-secondary">January 14, 2024</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <img src="https://media.licdn.com/dms/image/D5612AQGVt88SzCyfKg/article-cover_image-shrink_720_1280/0/1711714374253?e=2147483647&v=beta&t=iwcJvxjgFhn1M-63IF-zqF2RliySKIGSzI8yiUqYoVA" class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Unraveling the Science Behind Gaming: Exploring the Intersection of Technology and Play</h6>
+                    <small class="text-body-secondary">January 13, 2024</small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="p-4">
+            <h4 class="fst-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">March 2021</a></li>
+              <li><a href="#">February 2021</a></li>
+              <li><a href="#">January 2021</a></li>
+              <li><a href="#">December 2020</a></li>
+              <li><a href="#">November 2020</a></li>
+              <li><a href="#">October 2020</a></li>
+              <li><a href="#">September 2020</a></li>
+              <li><a href="#">August 2020</a></li>
+              <li><a href="#">July 2020</a></li>
+              <li><a href="#">June 2020</a></li>
+              <li><a href="#">May 2020</a></li>
+              <li><a href="#">April 2020</a></li>
+            </ol>
+          </div>
+  
+          <div class="p-4">
+            <h4 class="fst-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </main>
+  <footer class="new_footer_area bg_color">
+    <div class="new_footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                        <p>Don’t miss any updates of our new Games.!</p>
+                        <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                            <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                            <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                            <p class="mchimp-errmessage" style="display: none;"></p>
+                            <p class="mchimp-sucmessage" style="display: none;"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Pages</h3>
+                        <ul class="list-unstyled f_list">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="blog.html">Blog's</a></li>
+                            <li><a href="gallery.html">Games</a></li>
+                            <li><a href="explore.html">Explore</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                        <ul class="list-unstyled f_list">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Term &amp; conditions</a></li>
+                            <li><a href="#">Reporting</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support Policy</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                        <div class="f_social_icon">
+                            <a href="#" class="fab fa-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                              </svg></a>
+                            <a href="#" class="fab fa-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                              </svg></a>
+                            <a href="#" class="fab fa-linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                              </svg></a>
+                            <a href="#" class="fab fa-pinterest"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                              </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bg">
+            <div class="footer_bg_one"></div>
+            <div class="footer_bg_two"></div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-7">
+                    <p class="mb-0 f_400">© GAMICS Inc.. 2024 All rights reserved.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

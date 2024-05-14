@@ -1,0 +1,108 @@
+/* Add this CSS to your styles.css file */
+.container {
+    text-align: center;
+}
+
+.board {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    border: 2px solid #000;
+    display: inline-block;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #7FFF00; /* Parrot Green */
+}
+
+.cell:hover {
+    background-color: #333; /* Dark background color on hover */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.status {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.reset-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.mode-selection {
+    margin-bottom: 20px;
+}
+
+.mode-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.mode-button:hover {
+    background-color: #e0e0e0;
+}
+
+.mode-button.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.difficulty-selection {
+    margin-bottom: 20px;
+}
+
+.difficulty-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.difficulty-button:hover {
+    background-color: #e0e0e0;
+}
+
+.difficulty-button.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+.score span {
+    font-weight: bold;
+}

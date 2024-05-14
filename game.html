@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Hangman Game using JavaScript - @code.scientist x @codingtorque</title>
+    <style>
+        html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("https://res.cloudinary.com/dshmwg7vw/image/upload/v1550486966/OCCNFD0.jpg");
+  background-size: contain;
+  background-repeat: repeat;
+  font-family: "Permanent Marker", cursive;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper,
+.button-wrapper {
+  text-align: center;
+  margin: 10px;
+}
+
+.outside-wrapper {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.outside-wrapper:nth-child(2) {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  max-height: 300px;
+}
+
+.outside-wrapper:nth-child(3) {
+  margin-bottom: auto;
+  height: 178px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#statusMessage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  height: 94px;
+}
+
+svg {
+  transform: rotate(-1deg);
+}
+
+.lives {
+  width: 40px;
+  height: auto;
+}
+
+.hiddenLife {
+  display: inline-block;
+  animation: lifeAway 0.6s forwards;
+}
+
+@keyframes lifeAway {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(1.5) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(0.5) rotate(720deg);
+  }
+
+  100% {
+    transform: scale(0) rotate(720deg);
+    opacity: 0;
+    display: none;
+  }
+}
+
+#categoryName {
+  font-size: 20px;
+  margin: 0 5px 5px 5px;
+}
+
+#warningText {
+  color: rgb(239, 83, 80);
+}
+
+.warning {
+  height: 20px;
+}
+
+#guessWrapper p {
+  font-size: 40px;
+  display: inline-block;
+  letter-spacing: 15px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: green;
+}
+
+.inside-wrapper {
+  text-align: center;
+}
+
+.inside-wrapper:first-child {
+  width: 250px;
+}
+
+.inside-wrapper:last-child {
+  width: 400px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.inside-wrapper div:last-child {
+  margin-top: auto;
+}
+
+#wrongLetters {
+  text-align: right;
+}
+
+#wrongLetters span {
+  text-align: right;
+  color: rgb(239, 83, 80);
+  letter-spacing: 5px;
+}
+
+@media (max-width: 470px) {
+  #categoryName {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .lives {
+    width: 25px;
+    height: auto;
+  }
+
+  #guessWrapper p {
+    font-size: 20px;
+  }
+}
+
+input {
+  border-radius: 7px;
+  border-style: none;
+  border: 1px solid gray;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
+button {
+  transition: 0.2s linear;
+  outline: none;
+  border-style: none;
+  background-color: darkgray;
+  color: black;
+  border-radius: 7px;
+}
+
+button:hover,
+button:focus {
+  background-color: green;
+  outline: none;
+  color: white;
+}
+
+input,
+button {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+    </style>
+</head>
+
+<body>
+    <!-- Further Code Here -->
+    <main>
+        <div class="outside-wrapper">
+            <h1 id="statusMessage">Vanilla JavaScript Hangman Game </h1>
+    
+        </div>
+    
+        <div class="outside-wrapper">
+    
+            <div class="inside-wrapper">
+    
+                <!-- <?xml version="1.0" encoding="utf-8"?> -->
+                <!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="hangknuckles" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 169.28 205"
+                    enable-background="new 0 0 169.28 205" xml:space="preserve">
+                    <g id="hanger">
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="170.259"
+                            y1="203.446" x2="0.781" y2="203.001" />
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="38.779" y1="2"
+                            x2="39.279" y2="202" />
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="139.78" y1="4"
+                            x2="34.78" y2="2" />
+                        <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="138.78" y1="4"
+                            x2="135.78" y2="49" />
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="77.323" y1="2.51"
+                            x2="39.791" y2="28.042" />
+                    </g>
+                    <line id="show0" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4"
+                        stroke-miterlimit="10" x1="136.78" y1="119" x2="148.78" y2="152" />
+                    <line id="show1" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4"
+                        stroke-miterlimit="10" x1="137.78" y1="119" x2="114.78" y2="157" />
+                    <line id="show2" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4"
+                        stroke-miterlimit="10" x1="136.78" y1="108" x2="99.28" y2="100.5" />
+                    <line id="show3" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4"
+                        stroke-miterlimit="10" x1="136.78" y1="107" x2="166.28" y2="94.5" />
+                    <line id="show4" class="bodyPart hidden" stroke="#000000" stroke-width="4" stroke-miterlimit="10"
+                        x1="137.78" y1="82" x2="136.78" y2="120.5" />
+                    <image overflow="visible" id="show5" class="bodyPart hidden" width="96" height="96"
+                        xlink:href="https://res.cloudinary.com/dshmwg7vw/image/upload/v1550434128/icons8-ugandan-knuckles-96.png"
+                        transform="matrix(0.5426 0 0 0.516 110.2271 42.9535)">
+                    </image>
+    
+                </svg>
+    
+            </div>
+            <div class="inside-wrapper">
+                <div>
+                    <img id="life5" class="lives"
+                        src="https://res.cloudinary.com/dshmwg7vw/image/upload/v1550434128/icons8-ugandan-knuckles-96.png"
+                        alt="">
+                    <img id="life4" class="lives"
+                        src="https://res.cloudinary.com/dshmwg7vw/image/upload/v1550434128/icons8-ugandan-knuckles-96.png"
+                        alt="">
+                    <img id="life3" class="lives"
+                        src="https://res.cloudinary.com/dshmwg7vw/image/upload/v1550434128/icons8-ugandan-knuckles-96.png"
+                        alt="">
+                    <img id="life2" class="lives"
+                        src="https://res.cloudinary.com/dshmwg7vw/image/upload/v1550434128/icons8-ugandan-knuckles-96.png"
+                        alt="">
+                    <img id="life1" class="lives"
+                        src="https://res.cloudinary.com/dshmwg7vw/image/upload/v1550434128/icons8-ugandan-knuckles-96.png"
+                        alt="">
+                    <img id="life0" class="lives"
+                        src="https://res.cloudinary.com/dshmwg7vw/image/upload/v1550434128/icons8-ugandan-knuckles-96.png"
+                        alt="">
+                </div>
+                <div>
+                    <p id="wrongLetters" class="hidden">Wrong letters:<br> <span></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="outside-wrapper">
+    
+            <div class="wrapper">
+                <p id="categoryName">Category:smtg</p>
+                <div id="guessWrapper">
+                </div>
+            </div>
+    
+            <div class="button-wrapper">
+                <input type="text" id="userLetter" maxlength="1" size="4" autocomplete="off">
+                <button type="button" id="guessButton">Guess</button>
+            </div>
+    
+            <div class="wrapper warning">
+                <span id="warningText" class="hidden"> </span>
+            </div>
+    
+        </div>
+    
+        <div class="outside-wrapper">
+            <button type="button" id="newGame">New Game</button>
+        </div>
+    </main>
+    <script>
+        window.onload = function () {
+  let wordsArray = [
+    ["C", "A", "T", "S"],
+    ["M", "O", "U", "S", "E"],
+    ["J", "A", "V", "A", "S", "C", "R", "I", "P", "T"],
+    ["P", "O", "T", "A", "T", "O"],
+    ["U", "N", "D", "E", "F", "I", "N", "E", "D"],
+    ["S", "P", "A", "G", "H", "E", "T"],
+    ["W", "A", "Y"]
+  ];
+  let categoryArray = [
+    ["The internet and Youtube would not be the same without them"],
+    ["Touchpad ain't got nothing on me"],
+    ["Love it or hate it, frontend devs need it"],
+    ["This hangman game is..."],
+    ["I'm declared, but don't have a value"],
+    ["Somebody toucha my..."],
+    ["You do not know de..."]
+  ];
+
+  let newGame = document.getElementById("newGame");
+  newGame.onclick = startNewGame;
+
+  class Hangman {
+    constructor() {
+      //game state and initial values
+      this.random = Math.floor(Math.random() * wordsArray.length);
+      this.wordToGuess = wordsArray[this.random];
+      this.category = categoryArray[this.random];
+      this.placeholderArray = Array(this.wordToGuess.length).fill("_");
+      this.guessed = [];
+      this.lives = 6;
+    }
+    setupNewWord() {
+      //setsup new game input/buttons and creates initial placeholder containing only "_" and puts it on the board. placeholder has as many characters as the word
+      let guessWrapper = document.getElementById("guessWrapper");
+      let placeholderP = document.createElement("p");
+      let category = document.getElementById("categoryName");
+      category.innerHTML = this.category;
+
+      placeholderP.setAttribute("id", "placeholderP");
+      placeholderP.innerHTML = this.placeholderArray.join("");
+      guessWrapper.appendChild(placeholderP);
+
+      let userLetter = document.getElementById("userLetter");
+      userLetter.onkeypress = this.handleKeyPress.bind(this);
+
+      let guessButton = document.getElementById("guessButton");
+      guessButton.onclick = this.handleClick.bind(this);
+    }
+    handleClick() {
+      //main game logic, triggers input check, win or loose, updates lives, shows/hides various elements on click
+      let userLetterInput = document.getElementById("userLetter");
+      let userLetter = userLetterInput.value.toUpperCase();
+      let placeholderP = document.getElementById("placeholderP");
+      let warningText = document.getElementById("warningText");
+      let alreadyGuessed = document.querySelector("#alreadyGuessed span");
+      let wrongLetters = document.querySelector("#wrongLetters span");
+      let leftLives = document.querySelector("#leftLives span");
+
+      if (!/[a-zA-Z]/.test(userLetter)) {
+        //check that the user types in letters
+        unhideElements("hidden", warningText);
+        warningText.innerHTML = "Please enter a letter from A-Z"; //and shows warning if not
+      } else {
+        hideElements("hidden", warningText);
+
+        if (
+          this.wordToGuess.indexOf(userLetter) > -1 &&
+          this.guessed.indexOf(userLetter) == -1
+        ) {
+          //check if letter is a match, and first guess
+          checkGuess(this.wordToGuess, userLetter);
+          hideElements("hidden", warningText);
+        } else if (
+          this.wordToGuess.indexOf(userLetter) == -1 &&
+          this.guessed.indexOf(userLetter) == -1
+        ) {
+          //check if not match, and first wrong
+          hideElements("hidden", warningText);
+          unhideElements("hidden", wrongLetters.parentNode);
+          wrongLetters.innerHTML += userLetter;
+          this.lives--;
+          hangerDraw(this.lives);
+          hideLives(this.lives);
+        } else {
+          //if not first use of this letter
+          unhideElements("hidden", warningText);
+          warningText.innerHTML = "";
+          warningText.innerHTML += "Already typed " + userLetter;
+        }
+        this.guessed.indexOf(userLetter) == -1
+          ? this.guessed.push(userLetter)
+          : null; //for all guesses, if its the first time using the letter, save it
+
+        if (Array.from(placeholderP.innerHTML).indexOf("_") == -1) {
+          //trigger game win or loose
+          gameOver(true); //when no more '_' exist in placeholder, you win
+        } else if (this.lives == 0) {
+          //when lives are gone, you loose
+          gameOver();
+        }
+      }
+      userLetterInput.value = "";
+    }
+    handleKeyPress(e) {
+      //if enter is pressed trigger click on button
+      var guessButton = document.getElementById("guessButton");
+      if (e.keyCode === 13) {
+        guessButton.click();
+      }
+    }
+  }
+
+  function checkGuess(wordToGuess, userLetter) {
+    //handles check logic, and replaces letters in placeholder when a match is found
+    let placeholderP = document.getElementById("placeholderP");
+    let placeholderArray = Array.from(placeholderP.innerHTML);
+    placeholderArray = placeholderArray.map((el, i) => {
+      //check if letter exists in the guess word, and if yes,replace it in the placeholder and display it
+      if (wordToGuess[i] == userLetter) {
+        return (el = userLetter);
+      } else {
+        return el;
+      }
+    });
+
+    placeholderP.innerHTML = placeholderArray.join("");
+  }
+
+  function gameOver(win) {
+    // shows win/game over message
+    let winMessage = document.getElementById("statusMessage");
+    let btnWrapper = document.querySelector(".button-wrapper");
+    hideElements("hidden", btnWrapper);
+    if (win) {
+      winMessage.innerHTML = "You Win";
+      winMessage.style.color = "green";
+    } else {
+      winMessage.innerHTML = "Game Over";
+      winMessage.style.color = "rgb(239, 83, 80)";
+    }
+  }
+
+  function hangerDraw(num) {
+    //helper function triggers show hanger drawing
+    let show = document.getElementById(`show${num}`);
+    unhideElements("hidden", show);
+  }
+
+  function hideLives(num) {
+    //helper function triggers hides lives
+    let life = document.getElementById(`life${num}`);
+    hideElements("hiddenLife", life);
+  }
+
+  function hideElements(myclass, ...els) {
+    //helper func that hides
+    for (let el of els) {
+      el.classList.add(myclass);
+    }
+  }
+
+  function unhideElements(myclass, ...els) {
+    //helper func that unhides
+    for (let el of els) {
+      el.classList.remove(myclass);
+    }
+  }
+
+  function startNewGame() {
+    let btnWrapper = document.querySelector(".button-wrapper");
+    let winMessage = document.getElementById("statusMessage");
+    let wrongLetters = document.querySelector("#wrongLetters span");
+    let warningText = document.querySelector("#warningText");
+    let hiddenHangman = Array.from(document.querySelectorAll("svg .bodyPart"));
+    let hiddenLives = Array.from(document.querySelectorAll(".lives"));
+
+    for (let bodyPart of hiddenHangman) {
+      hideElements("hidden", bodyPart);
+    }
+
+    for (let life of hiddenLives) {
+      unhideElements("hiddenLife", life);
+    }
+
+    wrongLetters.innerHTML = "";
+    unhideElements("hidden", btnWrapper);
+    hideElements("hidden", wrongLetters.parentNode, warningText);
+    winMessage.innerHTML = "Vanilla JavaScript Hangman Game";
+    winMessage.style.color = "black";
+    let oldP = document.getElementById("placeholderP");
+    if (oldP.parentNode) {
+      oldP.parentNode.removeChild(oldP);
+    }
+
+    let startGame = new Hangman();
+    startGame.setupNewWord();
+  }
+
+  let startGame = new Hangman(); //initiates first game on windo load
+  startGame.setupNewWord();
+};
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
